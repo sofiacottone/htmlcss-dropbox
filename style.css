@@ -192,8 +192,14 @@ section>h2 {
 }
 
 /* vertical boxes + orizontal box  */
+.vert-box-container {
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
 .vert-box {
-    width: calc(100% / 3);
+    width: calc(100% / 3 - 14px);
     border: 1px solid #d0d0d3;
     color: #000021;
 }
@@ -207,10 +213,12 @@ section>h2 {
 
 .plan-top-box {
     line-height: 2;
+    margin-top: 20px;
 }
 
 .plan-price {
     font-weight: 600;
+    font-size: 14px;
 }
 
 .price-freq {
@@ -245,7 +253,8 @@ section>h2 {
 --------------------------*/
 .plan-top-list ul,
 .plan-bottom-list ul {
-    --icon-space: 1.3em;
+    --icon-space: 1.6em;
+    margin-top: 20px;
 }
 
 .plan-top-list li,
@@ -264,6 +273,10 @@ section>h2 {
 
 .user-li:before {
     content: "\f007";
+}
+
+.users-li:before {
+    content: "\f0c0";
 }
 
 .storage-li:before {
