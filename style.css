@@ -1,5 +1,16 @@
 /* #region RESET */
-:root {}
+/*-------------
+    debug
+--------------- */
+body * {
+    /* border: 0.5px solid red; */
+}
+
+
+:root {
+    --light-blue: #b4d0e7;
+    --blue-btn: #0061ff;
+}
 
 * {
     margin: 0;
@@ -9,9 +20,10 @@
 
 img {
     max-width: 100%;
+    display: block;
 }
 
-/* 
+
 a {
     text-decoration: none;
     color: inherit;
@@ -20,13 +32,13 @@ a {
 li {
     list-style: none;
     display: inline-block;
-} */
+}
 
 /* #endregion  */
 /* #region GENERAL */
 body {
     scroll-behavior: smooth;
-    font-family: "Roboto", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .flexbox {
@@ -36,9 +48,60 @@ body {
 /*----------------
     buttons  
 ------------------*/
+.btn {
+    padding: 4px 8px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-blue {
+    background-color: var(--blue-btn);
+    color: #fff;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-medium {
+    width: 225px;
+    height: 40px;
+}
+
+.btn-large {
+    width: 240px;
+    height: 40px;
+}
 
 /* #endregion  */
 /* #region HEADER */
+header {
+    justify-content: space-between;
+    max-height: 80px;
+    align-items: center;
+    padding: 10px 0;
+    overflow: auto;
+}
+
+.h-left,
+.h-right {
+    align-items: center;
+    gap: 16px;
+    margin: 0 20px;
+}
+
+header nav li {
+    padding: 8px 0;
+    margin-left: 6px;
+    border-bottom: 2px solid #fff;
+    /* !!!check font-size: clamp(); */
+}
+
+header nav li:hover {
+    border-bottom: 2px solid #000;
+}
 
 /* #endregion  */
 /* #region MAIN */
