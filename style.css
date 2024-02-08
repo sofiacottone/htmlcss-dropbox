@@ -45,6 +45,20 @@ body {
     display: flex;
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*----------------
+    typography  
+------------------*/
+h1 {
+    font-size: 60px;
+    font-weight: 900;
+    padding: 70px 70px 0 70px;
+}
+
 /*----------------
     buttons  
 ------------------*/
@@ -75,14 +89,31 @@ body {
     height: 40px;
 }
 
+/*----------------
+    columns  
+------------------*/
+.col-40 {
+    width: 40%;
+}
+
+.col-60 {
+    width: 60%;
+}
+
 /* #endregion  */
 /* #region HEADER */
-header {
-    justify-content: space-between;
+header>div:first-child {
+    width: 100%;
     max-height: 80px;
+    background-color: #fff;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 0;
     overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 .h-left,
@@ -101,6 +132,35 @@ header nav li {
 
 header nav li:hover {
     border-bottom: 2px solid #000;
+}
+
+.hero-bg {
+    background-color: var(--light-blue);
+    margin-top: 60px;
+
+}
+
+.hero {
+    min-height: 600px;
+}
+
+.hero-box {
+    translate: 0 60px;
+    padding-left: 70px;
+}
+
+
+header .col-40 p {
+    padding-right: 30px;
+}
+
+.hero-box button {
+    margin: 30px 0;
+}
+
+.arrow-dwn {
+    padding: 25px 0;
+    font-size: 2.5rem;
 }
 
 /* #endregion  */
