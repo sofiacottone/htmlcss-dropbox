@@ -21,33 +21,34 @@
 
 <body>
     <header>
-        <div class="d-flex">
-            <div class="h-left d-flex">
+        <!-- top header  -->
+        <div class="d-flex justify-content-between align-content-center col-100 p-y-10">
+            <div class="h-left d-flex align-items-center m-x-20">
                 <div class="logo"><img src="img/logo-small.png" alt="Dropbox Logo"></div>
                 <nav>
                     <ul>
-                        <li>
+                        <li class="d-inline-block">
                             <a href="#">Perché Dropbox</a>
                         </li>
-                        <li>
+                        <li class="d-inline-block">
                             <a href="#">Funzioni</a>
                         </li>
-                        <li>
+                        <li class="d-inline-block">
                             <a href="#">Piani e Prezzi</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <div class="h-right d-flex">
+            <div class="h-right d-flex align-items-center m-x-20">
                 <nav>
                     <ul>
-                        <li>
+                        <li class="d-inline-block">
                             <a href="#">Supporto</a>
                         </li>
-                        <li>
+                        <li class="d-inline-block">
                             <a href="#">Contatta l'ufficio vendite</a>
                         </li>
-                        <li>
+                        <li class="d-inline-block">
                             <a href="#">Accedi</a>
                         </li>
                     </ul>
@@ -55,12 +56,13 @@
                 <button class="btn btn-blue">Inizia</button>
             </div>
         </div>
-        <div class="hero-bg">
+        <!-- hero -->
+        <div class="hero-bg m-t-60">
             <div class="hero container">
-                <h1>Tutto ciò che ti serve per il lavoro, in un unico posto</h1>
-                <div class="hero-box d-flex">
+                <h1 class="p-t-60">Tutto ciò che ti serve per il lavoro, in un unico posto</h1>
+                <div class="hero-box d-flex m-b-60">
                     <div class="col-40">
-                        <p>
+                        <p class="p-r-30">
                             Finalmente tutti i tuoi strumenti, contenuti e collaboratori sono accessibili dallo
                             stesso
                             posto. Dropbox Business è più di uno spazio di archiviazione sicuro: è un modo
@@ -68,10 +70,10 @@
                             e
                             integrato per ottimizzare il flusso di lavoro esistente.
                         </p>
-                        <button class="btn btn-large btn-blue">Inizia la tua prova gratuita
+                        <button class="btn btn-fit btn-blue m-y-30">Inizia la tua prova gratuita
                         </button>
-                        <p>Annulla in qualsiasi momento</p>
-                        <div class="arrow-dwn"><i class="fa-solid fa-arrow-down"></i></div>
+                        <p class="p-r-30">Annulla in qualsiasi momento</p>
+                        <div class="arrow-dwn p-y-30"><i class="fa-solid fa-arrow-down"></i></div>
 
                     </div>
                     <div class="col-60">
@@ -82,125 +84,165 @@
         </div>
     </header>
     <main>
-        <section class="container-small mg-top80">
-            <h2>Trova il piano business che fa per te</h2>
-            <div class="input-radio">
+        <section class="container-small m-t-80">
+            <h2 class="p-y-20">Trova il piano business che fa per te</h2>
+            <div class="input-radio p-t-30 p-b-50">
                 <input type="radio" id="fatturazione-m" name="fatturazione" value="Fatturazione mensile" checked>
-                <label for="fatturazione-m">Fatturazione mensile</label>
+                <label class="m-r-20" for="fatturazione-m">Fatturazione mensile</label>
 
                 <input type="radio" id="fatturazione-y" name="fatturazione" value="Fatturazione annuale">
-                <label for="fatturazione-y">Fatturazione annuale</label>
+                <label class="m-r-20" for="fatturazione-y">Fatturazione annuale</label>
             </div>
-            <div class="vert-box-container d-flex">
+            <div class="box-container d-flex flex-wrap justify-content-between m-b-60">
                 <!-- col 1  -->
-                <div class="vert-box">
-                    <div class="user-plan"><i class="fa-solid fa-user"></i> Singolo</div>
-                    <div class="plan-top-box">
+                <div class="vert-box col">
+                    <div class="user-plan text-center"><i class="fa-solid fa-user"></i> Singolo</div>
+                    <div class="plan-top-box p-x-30 m-t-20">
                         <h3 class="plan-name">Professional</h3>
-                        <div class="plan-price">€ 12.00</div>
+                        <div class="plan-price p-y-10">€ 12.00</div>
                         <small class="price-freq">/mese</small>
                     </div>
-                    <div class="plan-top-list">
-                        <ul>
-                            <li class="user-li special-li">1 utente</li>
-                            <li class="storage-li special-li">5 TB di spazio di archiviazione <br> sicuro
+                    <div class="plan-top-list p-x-30">
+                        <ul class="m-t-20">
+                            <li class="user-li special-li d-inline-block">1 utente</li>
+                            <li class="storage-li special-li d-inline-block">5 TB di spazio di archiviazione <br> sicuro
                             </li>
-                            <li class="sharing-li special-li">Funzioni di produttività premium e condivisione file
+                            <li class="sharing-li special-li d-inline-block">Funzioni di produttività premium e
+                                condivisione file
                                 semplice e <br> sicura
                             </li>
                         </ul>
                     </div>
-                    <div class="btn-container">
-                        <button class="btn btn-blue btn-large">Prova gratis per 30 giorni</button>
+                    <div class="btn-container p-x-30 m-y-30">
+                        <button class="btn btn-blue btn-100">Prova gratis per 30 giorni</button>
                     </div>
-                    <div class="buy-now">oppure <a class="visited-link" href="#">acquista ora</a></div>
+                    <div class="buy-now p-x-30">oppure <a class="visited-link" href="#">acquista ora</a></div>
                     <hr>
-                    <div class="plan-bottom-list">
+                    <div class="plan-bottom-list p-x-30">
                         <h4>Punti Salienti del piano</h4>
                         <ul>
-                            <li class="check-li special-li">Invia file fino a 100 GB con Dropbox Transfert
+                            <li class="check-li special-li d-inline-block">Invia file fino a 100 GB con Dropbox
+                                Transfert
                             </li>
-                            <li class="check-li special-li">Cartelle offline su dispositivi mobili
+                            <li class="check-li special-li d-inline-block">Cartelle offline su dispositivi mobili
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!-- col 2 -->
-                <div class="vert-box">
-                    <div class="user-plan"><i class="fa-solid fa-users"></i> Team</div>
-                    <div class="plan-top-box">
+                <div class="vert-box col">
+                    <div class="user-plan text-center"><i class="fa-solid fa-users"></i> Team</div>
+                    <div class="plan-top-box m-t-20 p-x-30">
                         <h3 class="plan-name">Advanced</h3>
-                        <div class="plan-price">€ 18.00</div>
+                        <div class="plan-price p-y-10">€ 18.00</div>
                         <small class="price-freq">/utente/mese</small>
                     </div>
-                    <div class="plan-top-list">
-                        <ul>
-                            <li class="users-li special-li"> 3 o più utenti</li>
-                            <li class="storage-li special-li">Tutto lo spazio di cui ha bisogno il tuo team
+                    <div class="plan-top-list p-x-30">
+                        <ul class="m-t-20">
+                            <li class="users-li special-li d-inline-block"> 3 o più utenti</li>
+                            <li class="storage-li special-li d-inline-block">Tutto lo spazio di cui ha bisogno il tuo
+                                team
                             </li>
-                            <li class="sharing-li special-li">
+                            <li class="sharing-li special-li d-inline-block">
                                 Sofisticate funzioni di controllo e per tenere al sicuro
                                 tutti i file del tuo team
                             </li>
                         </ul>
                     </div>
-                    <div class="btn-container">
-                        <button class="btn btn-blue btn-large">Prova gratis per 30 giorni</button>
+                    <div class="btn-container p-x-30 m-y-30">
+                        <button class="btn btn-blue btn-100">Prova gratis per 30 giorni</button>
                     </div>
-                    <div class="buy-now">oppure <a class="visited-link" href="#">acquista ora</a></div>
+                    <div class="buy-now p-x-30">oppure <a class="visited-link" href="#">acquista ora</a></div>
                     <hr>
-                    <div class="plan-bottom-list">
+                    <div class="plan-bottom-list p-x-30">
                         <h4>Punti Salienti del piano</h4>
                         <ul>
-                            <li class="check-li special-li">Nessun limite di spazio per i file
+                            <li class="check-li special-li d-inline-block">Nessun limite di spazio per i file
                             </li>
-                            <li class="check-li special-li">Cartelle offline su dispositivi mobili
+                            <li class="check-li special-li d-inline-block">Cartelle offline su dispositivi mobili
                             </li>
-                            <li class="check-li special-li">Risparmio del 50% rispetto alle iscrizioni singole
+                            <li class="check-li special-li d-inline-block">Risparmio del 50% rispetto alle iscrizioni
+                                singole
                             </li>
-                            <li class="check-li special-li">Possibilità di inserire nuovi membri del team
+                            <li class="check-li special-li d-inline-block">Possibilità di inserire nuovi membri del team
                             </li>
-                            <li class="check-li special-li">Gestione dei permessi in base ai ruoli
+                            <li class="check-li special-li d-inline-block">Gestione dei permessi in base ai ruoli
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!-- col 3  -->
-                <div class="vert-box">
-                    <div class="user-plan"><i class="fa-solid fa-building"></i> Azienda</div>
-                    <div class="plan-top-box">
+                <div class="vert-box col">
+                    <div class="user-plan text-center"><i class="fa-solid fa-building"></i> Azienda</div>
+                    <div class="plan-top-box m-t-20 p-x-30">
                         <h3 class="plan-name">Enterprise</h3>
-                        <div class="plan-price">Contattaci</div>
+                        <div class="plan-price p-y-10">Contattaci</div>
                         <small class="price-freq">-</small>
                     </div>
-                    <div class="plan-top-list">
-                        <ul>
-                            <li class="user-li special-li">10 o più utenti</li>
-                            <li class="storage-li special-li">Soluzioni personalizzabili per la tua azienda
+                    <div class="plan-top-list p-x-30">
+                        <ul class="m-t-20">
+                            <li class="user-li special-li d-inline-block">10 o più utenti</li>
+                            <li class="storage-li special-li d-inline-block">Soluzioni personalizzabili per la tua
+                                azienda
                             </li>
-                            <li class="sharing-li special-li">Assistenza personalizzata per aiutare gli amministrator in
+                            <li class="sharing-li special-li d-inline-block">Assistenza personalizzata per aiutare gli
+                                amministrator in
                                 una gestione su larga scala
                             </li>
                         </ul>
                     </div>
-                    <div class="btn-container">
-                        <button class="btn btn-blue btn-large">Contattaci</button>
+                    <div class="btn-container p-x-30 m-y-30">
+                        <button class="btn btn-blue btn-100">Contattaci</button>
                     </div>
-                    <div class="buy-now">oppure <a class="visited-link" href="#">acquista ora</a></div>
-                    <hr>
-                    <div class="plan-bottom-list">
+                    <div class="buy-now p-x-30">oppure <a class="visited-link" href="#">acquista ora</a></div>
+                    <hr class="col-20 m-y-40 m-x-30">
+                    <div class="plan-bottom-list p-x-30">
                         <h4>Punti Salienti del piano</h4>
                         <ul>
-                            <li class="check-li special-li">Cartelle offline su dispositivi mobili
+                            <li class="check-li special-li d-inline-block">Cartelle offline su dispositivi mobili
                             </li>
-                            <li class="check-li special-li">Servizio assistenza 24/h
+                            <li class="check-li special-li d-inline-block">Servizio assistenza 24/h
                             </li>
-                            <li class="check-li special-li">Possibilità di personalizzazione totale
+                            <li class="check-li special-li d-inline-block">Possibilità di personalizzazione totale
                             </li>
                         </ul>
                     </div>
                 </div>
+                <div class="col-100 col p-b-30">
+                    <div class="user-plan text-center"><i class="fa-solid fa-users"></i> Team</div>
+                    <div class="d-flex">
+                        <div class="plan-top-box col-70 m-t-20 p-x-30">
+                            <h3 class="plan-name">Enterprise</h3>
+                            <div class="plan-price p-y-10">Contatta l'ufficio vendite per i prezzi</div>
+                            <small class="price-freq">Soluzioni personalizzate e supporto su misura per aiutare i
+                                professionisti IT nella gestione su qualsiasi scala.</small>
+                        </div>
+                        <div class="btn-container col-30 p-x-30 m-y-30">
+                            <button class="btn btn-blue btn-100">Contatta l'ufficio vendite</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+        <section class="container-small d-flex">
+            <div class="col-60">
+                <img src="img/partner.png" alt="partner">
+            </div>
+            <div class="col-40 p-y-30">
+                <h3 class="p-x-30 p-b-30">Entra in contatto con un partner Dropbox</h3>
+                <p class="p-x-30">
+                    Trova un partner Dropbox e HelloSign di fiducia. Ottieni le soluzioni e i servizi necessari per
+                    raggiungere i tuoi obiettivi aziendali, tra cui implementazione, integrazione, gestione e supporto
+                    continui.
+                </p>
+                <div class="btn-container p-x-30 m-y-30">
+                    <button class="btn btn-white btn-fit border">Trova un partner</button>
+                </div>
+            </div>
+        </section>
+        <section class="container-small">
+            <h2 class="p-y-20">Esegui più operazioni con Dropbox Business</h2>
+            <div class="d-flex"></div>
         </section>
     </main>
     <footer></footer>
