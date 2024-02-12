@@ -812,7 +812,7 @@ input:checked+label+.collapse {
 
 /* #endregion  */
 /* #region MEDIA QUERIES */
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 980px) {
 
     /* HEADER  */
     /* top header  */
