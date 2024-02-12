@@ -515,7 +515,7 @@ header nav li:hover {
 }
 
 section h2 {
-    font-size: 30px;
+    font-size: 26px;
 }
 
 .dropbox-business {
@@ -524,11 +524,6 @@ section h2 {
 
 .dropbox-business h3 {
     padding-bottom: 20px;
-}
-
-.faq .question>span {
-    display: table-cell;
-
 }
 
 .faq .question {
@@ -540,11 +535,59 @@ section h2 {
     border-bottom: 1px solid #999999;
 }
 
-.dropdown-arrow {
-    padding-inline-end: 10px;
-    cursor: pointer;
+/*------------------------- 
+    custom radio button 
+--------------------------*/
+.faq input {
+    display: none;
 }
 
+.faq label {
+    display: block;
+    cursor: pointer;
+    border-radius: 3px;
+    color: #000;
+    transition: ease .5s;
+    position: relative;
+}
+
+.question:hover {
+    background: var(--light-blue);
+}
+
+.faq label::after {
+    content: '\f107';
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    margin-right: 14px;
+}
+
+.faq input:checked+.faq label::after {
+    content: '\f106';
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    right: 14px;
+    top: 3px;
+    margin-right: 14px;
+
+}
+
+.content {
+    padding-top: 20px;
+    border-radius: 3px;
+    margin-right: 40px;
+}
+
+input+label+.collapse {
+    display: none;
+}
+
+input:checked+label+.collapse {
+    display: block;
+}
 
 /*------------------------- 
     special list items 
@@ -554,10 +597,8 @@ section h2 {
     padding-right: 10px;
 }
 
-.icon-text-wrapper span,
-.icon {
-    display: table-cell;
-    vertical-align: top;
+.icon-text-wrapper {
+    display: flex;
 }
 
 .icon-text-wrapper {
@@ -569,19 +610,22 @@ section h2 {
 }
 
 /* square section  */
-.brand-box {
-    max-height: 480px;
-
-}
 
 .brand-box>div {
-    width: calc(100% / 6);
+    width: calc(100% / 3);
+    height: calc(100vw / 3);
+    overflow-y: auto;
+    flex-wrap: wrap;
+
 }
 
 .square {
-    width: 100%;
-    /* height: 50%; */
+    height: 50%;
+    width: 50%;
     aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -590,15 +634,14 @@ section h2 {
     width: 60%;
     height: 100%;
     display: block;
-    margin: auto;
 
 }
 
 .text-box {
     background-color: #f5f5f5;
     flex-grow: 1;
-    align-self: stretch;
-    max-height: 100%;
+    /* align-self: stretch;
+    max-height: 100%; */
     padding: 30px 30px;
 }
 
@@ -659,6 +702,11 @@ footer {
     padding-bottom: 30px;
 }
 
+.footer-list li a:hover,
+.footer-list-small label:hover {
+    color: var(--light-blue);
+}
+
 .footer-list li {
     font-size: 14px;
     padding-bottom: 20px;
@@ -674,6 +722,300 @@ footer .language {
     font-size: 14px;
     word-spacing: 8px;
     cursor: pointer;
+    width: fit-content;
+}
+
+.languages {
+    text-align: center;
+    display: none;
+}
+
+footer .language:hover .languages {
+    display: block;
+}
+
+.languages li:hover {
+    background-color: var(--light-blue);
+    border-radius: 5px;
+    color: #000;
+
+}
+
+/*------------------------- 
+footer list small
+--------------------------*/
+.footer-list-small {
+    display: none;
+}
+
+.footer-list-small {
+    margin: 30px;
+}
+
+.footer-list-small li {
+    padding-block: 10px;
+    display: flex;
+    gap: 80px;
+}
+
+.footer-list-small input {
+    display: none;
+}
+
+.footer-list-small label {
+    display: block;
+    cursor: pointer;
+    border-radius: 3px;
+    color: #fff;
+    transition: ease .5s;
+    position: relative;
+}
+
+.question:hover {
+    background: var(--light-blue);
+}
+
+.faq label::after {
+    content: '\f107';
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    margin-right: 14px;
+}
+
+.faq input:checked+.faq label::after {
+    content: '\f106';
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    right: 14px;
+    top: 3px;
+    margin-right: 14px;
+
+}
+
+.content {
+    padding-top: 20px;
+    border-radius: 3px;
+    margin-right: 40px;
+}
+
+input+label+.collapse {
+    display: none;
+}
+
+input:checked+label+.collapse {
+    display: block;
+}
+
+/* #endregion  */
+/* #region MEDIA QUERIES */
+@media screen and (max-width: 880px) {
+
+    /* HEADER  */
+    /* top header  */
+    .top-header .h-left nav ul,
+    .top-header .h-right nav ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .top-header .h-left nav li,
+    .top-header .h-right nav li {
+        padding: 0;
+    }
+
+    .top-header .h-right button {
+        padding: 6px;
+    }
+
+    /* bottom header  */
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h1,
+    .hero-box .col-40 {
+        padding-inline: 20px;
+    }
+
+    .hero-box {
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 14px;
+    }
+
+    .hero-box .col-60,
+    .hero-box .col-40 {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .hero-box .arrow-dwn {
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+
+    /* MAIN  */
+    /* section 1  */
+    section:not(.brand-box),
+    footer {
+        padding-inline: 20px;
+    }
+
+    section .input-radio,
+    .box-container .plan-top-list,
+    .box-container .plan-bottom-list {
+        font-size: 14px;
+    }
+
+    section .box-container h3 {
+        font-size: 16px;
+    }
+
+    section .box-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section .box-container .vert-box {
+        width: 100%
+    }
+
+    section .box-container .col-100 div:not(.user-plan) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section .box-container .col-100 div:not(.user-plan) .plan-top-box,
+    section .box-container .col-100 div:not(.user-plan) .btn-container {
+        width: 80%;
+        text-align: left;
+    }
+
+    section .box-container .col-100 div:not(.user-plan) .btn-container {
+        align-self: center;
+        margin-bottom: 0;
+    }
+
+
+    section .box-container .plan-top-box {
+        padding-inline: 30px;
+    }
+
+    section .box-container .vert-box .btn-container {
+        width: 80%;
+        margin: 0 auto 20px auto;
+    }
+
+    /* section 2  */
+    .find-partner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .find-partner .col-60,
+    .find-partner .col-40 {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* section 3  */
+    .operations div {
+        justify-content: center;
+    }
+
+    .operations div>div {
+        width: 90%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .operations div>div img {
+        width: 90%;
+        text-align: center;
+    }
+
+    /* section 4  */
+    .team {
+        text-align: center;
+    }
+
+    .team h2,
+    .free-trial h2 {
+        font-size: 22px;
+    }
+
+    .brand-box div[class*="d-flex"] {
+        width: 50%;
+        height: 50%;
+        order: -1;
+    }
+
+    .brand-box .text-box {
+        width: 100%;
+        height: 50%;
+    }
+
+    .brand-box .text-box svg {
+        width: 70%;
+    }
+
+    .brand-box .text-box p {
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+
+    .brand-box .text-box hr {
+        margin-block: 20px;
+    }
+
+    /* section 5  */
+    .free-trial {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .free-trial .col-60,
+    .free-trial .col-40 {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* section 6  */
+    .faq h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .faq .question {
+        font-size: 14px;
+    }
+
+    /* footer  */
+    footer .footer-list a {
+        font-size: 12px;
+    }
+
+    .footer-list {
+        display: none;
+    }
+
+    .footer-list-small {
+        display: block;
+    }
+
+    footer hr,
+    footer .language {
+        margin-inline: 30px;
+    }
 }
 
 /* #endregion  */
