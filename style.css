@@ -704,7 +704,7 @@ footer {
 
 .footer-list li a:hover,
 .footer-list-small label:hover {
-    color: var(--light-blue);
+    color: #0093ce;
 }
 
 .footer-list li {
@@ -723,6 +723,7 @@ footer .language {
     word-spacing: 8px;
     cursor: pointer;
     width: fit-content;
+    padding-bottom: 60px;
 }
 
 .languages {
@@ -735,7 +736,7 @@ footer .language:hover .languages {
 }
 
 .languages li:hover {
-    background-color: var(--light-blue);
+    background-color: #0093ce;
     border-radius: 5px;
     color: #000;
 
@@ -836,6 +837,7 @@ input:checked+label+.collapse {
     /* bottom header  */
     .hero h1 {
         font-size: 40px;
+        text-align: center;
     }
 
     .hero h1,
@@ -872,6 +874,11 @@ input:checked+label+.collapse {
     .box-container .plan-top-list,
     .box-container .plan-bottom-list {
         font-size: 14px;
+    }
+
+    section h2,
+    section .input-radio {
+        text-align: center;
     }
 
     section .box-container h3 {
@@ -939,7 +946,7 @@ input:checked+label+.collapse {
     }
 
     .operations div>div img {
-        width: 90%;
+        width: 80%;
         text-align: center;
     }
 
@@ -965,7 +972,7 @@ input:checked+label+.collapse {
     }
 
     .brand-box .text-box svg {
-        width: 70%;
+        width: 60%;
     }
 
     .brand-box .text-box p {
@@ -1000,6 +1007,17 @@ input:checked+label+.collapse {
     }
 
     /* footer  */
+    footer .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer .container-fluid {
+        max-height: fit-content;
+    }
+
+
     footer .footer-list a {
         font-size: 12px;
     }
@@ -1012,9 +1030,14 @@ input:checked+label+.collapse {
         display: block;
     }
 
-    footer hr,
+    footer hr {
+        display: none;
+    }
+
     footer .language {
-        margin-inline: 30px;
+        margin-right: 30px;
+        margin-bottom: -30px;
+        align-self: flex-end;
     }
 }
 
