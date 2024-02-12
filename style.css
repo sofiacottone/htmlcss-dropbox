@@ -549,6 +549,7 @@ section h2 {
     color: #000;
     transition: ease .5s;
     position: relative;
+    font-weight: 700;
 }
 
 .question:hover {
